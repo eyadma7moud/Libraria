@@ -1,61 +1,46 @@
-# Libraria — Fixed Files
+# 📚 Libraria - Comprehensive Library Management System
 
-## Files to Replace in Your Project
-
-### Replace these HTML files:
-- `book-details.html` → Added ❤️ Favourite toggle button
-- `favourite.html`    → Now fully dynamic (no hardcoded books), shows real user favourites
-- `about.html`        → Phone/email/location are now clickable links + team section
-
-### Replace these JS files (in your `js/` folder):
-- `js/book-details.js` → Favourite toggle, correct borrow/return button logic
-- `js/books-page.js`   → Heart (🤍/❤️) button on every book card, URL search pre-fill
-- `js/borrow.js`       → Marks book as **unavailable**, saves to history, goes to borrow_success
-- `js/return.js`       → Marks book as **available** again, saves to history, goes to return_success
-- `js/favourite.js`    → Reads from user's `favourites[]` array, dynamic add/remove
+**Libraria** is a modern, feature-rich web application designed to streamline library operations. It provides a seamless experience for readers to explore books and a robust management interface for administrators.
 
 ---
 
-## What Was Fixed
+## ✨ Key Features
 
-### 1. Borrow flow
-- Clicking "Borrow Book" now correctly marks the book status → `"borrowed"` (unavailable)
-- Adds entry to user's `borrowedBooks[]` history
-- Redirects to `borrow_success.html` with correct info
+### 👤 User Side
+- **Authentication:** Secure Login and Registration system.
+- **Book Catalog:** Browse a dynamic list of books with search and category filtering.
+- **Book Details:** Dedicated pages for each book providing summaries and metadata.
+- **Borrowing System:** Simple workflow to borrow books and track personal **Borrow History**.
+- **Favorites:** Users can curate their own "Must-Read" list using the favorites feature.
+- **Personal Profile:** Manage account settings, profile information, and current borrowings.
 
-### 2. Return flow
-- Clicking "Return Book" now correctly marks the book status → `"available"` again
-- Updates user's `borrowedBooks[]` entry: `returned: true`, `actualReturn: date`
-- Redirects to `return_success.html`
-- Borrow history page shows returned books correctly
-
-### 3. Favourites — any book, any state
-- Every book card on `books.html` has a 🤍/❤️ button to toggle favourite
-- `book-details.html` has a "❤️ Add to Favourites" / "💔 Remove from Favourites" button
-- `favourite.html` is now fully dynamic — shows real books from your favourites list
-- Works for available AND borrowed books
-- Requires login (redirects to login if not logged in)
-
-### 4. Borrow/Return requires login
-- Both `borrow.js` and `return.js` redirect to `login.html` if not logged in
-- Admin users are blocked from borrowing
-
-### 5. About page — clickable contact info
-- Phone number: `<a href="tel:+201234567890">`
-- Email: `<a href="mailto:info@library.edu">`
-- Address: links to Google Maps
-- Footer links are also clickable across all pages
-
-### 6. Borrow history accuracy
-- History shows all past borrows (returned = true)
-- Active borrows shown in "My Borrowed Books" (returned = false)
-- Stats on profile page update correctly
+### 🛡️ Admin Side (Dashboard)
+- **Inventory Management:** Full CRUD operations (Create, Read, Update, Delete) for the book collection.
+- **User Oversight:** Monitor registered users and their activities.
+- **Transaction Tracking:** Manage and confirm book returns and successful borrowings.
 
 ---
 
-## No changes needed for:
-- `js/auth.js` (keep as-is)
-- `js/profile.js` (keep as-is)
-- `js/account_settings.js` (keep as-is)
-- `js/books.js` (admin dashboard, keep as-is)
-- All other HTML pages
+## 🛠️ Tech Stack
+
+- **Frontend:** HTML5 & CSS3 (Modern UI/UX).
+- **Styling:** CSS Variables for dynamic theming and responsive layouts.
+- **Logic:** Vanilla JavaScript (ES6+) for modularity and performance.
+- **Assets:** High-quality imagery sourced from Unsplash and Pexels.
+
+---
+
+## 🎨 Technical Highlights
+
+- **🌓 Theme Switching:** Built-in Dark and Light mode support using `theme.js`.
+- **📱 Fully Responsive:** Optimized for desktops, tablets, and smartphones.
+- **🏗️ Modular Architecture:** JavaScript logic is decoupled into specific files (e.g., `auth.js`, `books.js`) for better maintainability.
+- **⚡ Smooth Interactions:** Interactive sliders and UI feedback for borrowing/returning processes.
+
+---
+
+## 🚀 Getting Started
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/YOUR_USERNAME/Libraria.git](https://github.com/YOUR_USERNAME/Libraria.git)
